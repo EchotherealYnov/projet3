@@ -30,12 +30,6 @@ pipeline {
             }
         }
 
-        stage('HTTP Request') {
-            steps {
-                httpRequest url: 'http://172.17.0.2', validResponseCodes: '200'
-            }
-        }
-
         stage('Execute Script Shell') {
             steps {
         script {
